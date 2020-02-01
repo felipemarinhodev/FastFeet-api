@@ -1,9 +1,12 @@
 import express from 'express';
 import routes from './routes';
 
+require('dotenv').config();
+
 class App {
   constructor() {
     this.server = express();
+    console.log('var. env:', process.env.SECRET_KEY);
 
     this.middlewares();
     this.routes();
