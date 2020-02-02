@@ -6,7 +6,7 @@ import routes from './routes';
 class App {
   constructor() {
     this.server = express();
-    console.log('var. env:', process.env.SECRET_KEY);
+    console.log('var. env:', process.env.NODE_ENV);
 
     this.middlewares();
     this.routes();
